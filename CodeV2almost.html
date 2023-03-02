@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REST API</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./js/api.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="container mt-2">
+    <h1>REST API STUFF by Chawadol Suwansanit</h1>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      Add Production  
+    </button>
+    <table class="table table-striped" id="data">
+        <thead>
+          <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>price</th>
+            <th>description</th> 
+            <th>category name  </th>  
+            <th>category id  </th>         
+            <th>option</th>
+          </tr>
+        </thead>
+        <tbody >
+        </tbody>
+      </table>
+    <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="container mt-2">
+          <form action="">
+              <div class="mb-3 mt-3">
+                <label for="name" class="form-label">name:</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter name" name="name">
+              </div>
+              <div class="mb-3">
+                <label for="description" class="form-label">description:</label>
+                <input type="text" class="form-control" id="description" placeholder="Enter description" name="description">
+              </div>
+              <div class="mb-3">
+                  <label for="category_id" class="form-label">category id:</label>
+                  <input type="text" class="form-control" id="category_id" placeholder="Enter category id" name="category_id">
+                </div>
+              <div class="mb-3">
+                  <label for="price" class="form-label">price:</label>
+                  <input type="text" class="form-control" id="price" placeholder="Enter price" name="price">
+                </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" onclick="add()">Save</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
