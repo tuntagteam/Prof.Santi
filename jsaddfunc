@@ -1,0 +1,17 @@
+function add(){
+    let postObj = { 
+        name: $('input[name=name]').val(),
+        description: $('input[name=description]').val(),
+        price:$('input[name=price]').val(),
+        category_id:$('input[name=category_id]').val()
+}
+let data = JSON.stringify(postObj)
+    $.ajax({
+        type: "POST",
+        dataType: 'json',
+        data:data,
+        url: "http://localhost/coe1401/php/product/create.php"
+}).then(function(data) {
+  location.reload();
+});
+}
